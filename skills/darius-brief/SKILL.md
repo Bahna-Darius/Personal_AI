@@ -7,7 +7,7 @@ A brief is complete when a feature chat that has read nothing else can do the ta
 
 ## Steps
 
-1. Use the project's brief template if `notes/tasks/` has one; otherwise the template in the global CLAUDE.md, section 3. Keep its headings and language; add the fields below inside "What" and "Done means".
+1. Use the project's brief template if `notes/tasks/` has one; otherwise the template in the darius-orchestrator skill, section 3. Keep its headings and language; add the fields below inside "What" and "Done means".
 2. The orchestrator reads no code and runs no suite: send a Haiku subagent to look up the facts and run the project's test command on HEAD. It returns, in at most 20 lines, the files involved, the current behaviour in five lines, and the names of the tests that already fail. Ask me only for intent, priorities and trade-offs.
 3. Fill every field. A field that does not apply says "none" and why; never leave one out.
 4. Show me the brief only if the task is in a core area or changes behaviour I would notice; otherwise write it and log the decision.

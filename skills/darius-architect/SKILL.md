@@ -33,7 +33,7 @@ Done when I have approved VISION.md and PLAN.md.
 - One task is one concern, one commit, and fits one feature chat.
 - Every task has a verification that can be run as a command. If none exists yet, the task is a spike or an open question, not a task.
 - Every task cites its sources (R-, D- IDs). A task without a source is a suggestion: mark it so.
-- In a new repository the first task is T-000 scaffold (global CLAUDE.md, section 7). After it, the first task is the smallest end-to-end slice that can be checked.
+- In a new repository the first task is T-000 scaffold (darius-orchestrator skill, section 7). After it, the first task is the smallest end-to-end slice that can be checked.
 - Every milestone has exit criteria the verifier can run or measure; they are checked at milestone close.
 - Task status lives only in BACKLOG.md, not in the plan.
 - A criterion measured on the samples the rules were built from is labelled a development-set score, and the plan asks for a held-out set.

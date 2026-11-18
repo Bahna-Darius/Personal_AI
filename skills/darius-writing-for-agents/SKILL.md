@@ -50,7 +50,7 @@ End every step on a criterion that lets the agent tell done from not done. Prefe
 ## Mechanics in this setup
 
 **Subagent** (`<project>/.claude/agents/<name>.md`; `~/.claude/agents/` only for an agent every project needs):
-- Frontmatter: `name`, `description`, `tools`, `model`, `effort`. The model and effort table is in the global CLAUDE.md, section 2; choose by the kind of work.
+- Frontmatter: `name`, `description`, `tools`, `model`, `effort`. The model and effort table is in the darius-orchestrator skill, section 2; choose by the kind of work.
 - `tools`: only what the job needs. A read-only agent gets no Write or Edit.
 - Body: one job, its scope, its hard limits, the scratch folder it may write to, and the return format (a short summary with a line limit).
 - An agent created for one task is deleted or archived when the task closes; an agent for a recurring task stays.
@@ -61,7 +61,7 @@ End every step on a criterion that lets the agent tell done from not done. Prefe
 
 **CLAUDE.md**: loaded in every session of its scope. Keep commands, core areas, traps and pointers to docs; move long explanations to a doc behind a pointer.
 
-**Brief** (`notes/tasks/T-NNN.md`): follow the template in the global CLAUDE.md, section 3.
+**Brief** (`notes/tasks/T-NNN.md`): follow the template in the darius-orchestrator skill, section 3.
 
 ## Before writing
 

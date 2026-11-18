@@ -14,7 +14,7 @@ Write one for a choice that is costly to reverse or that shapes other work: a fr
 
 ## Steps
 
-1. Decisions live in `docs/DECISIONS.md` (global CLAUDE.md, section 3). If the project already keeps them elsewhere (an `adr` folder, another decisions file), use that place and do not create a second one.
+1. Decisions live in `docs/DECISIONS.md` (darius-orchestrator skill, section 3). If the project already keeps them elsewhere (an `adr` folder, another decisions file), use that place and do not create a second one.
 2. Take the next D- number free in both `notes/discovery/MEETINGS.md` and `docs/DECISIONS.md` (one series). In `docs/DECISIONS.md` the ADR is a section headed `D-NN. Title`; in an `adr` folder it is a file `NNNN-short-title.md`.
 3. Draft from the conversation and the code. Ask me only for what cannot be found: the constraint that forced the choice, or which option I rejected and why.
 4. Show me the draft and wait for my OK before writing the file.
