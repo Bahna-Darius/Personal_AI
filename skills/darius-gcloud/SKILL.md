@@ -1,6 +1,6 @@
 ---
 name: darius-gcloud
-description: "gcloud CLI (Google Cloud): check syntax with gcloud help, keep output small, and stop before any command that changes or costs something. Use when planning, writing, explaining or running a gcloud command. Not for Google Cloud client-library code or raw REST calls."
+description: "gcloud CLI (Google Cloud): check syntax with gcloud help, keep output small, and stop before any command that changes or costs something. Use when planning, writing, explaining or running a gcloud command, or calling a Google Cloud API such as Vertex AI / Gemini with a gcloud token. Not for Google Cloud client-library code."
 ---
 
 Adapted from google/skills (Apache License 2.0, see LICENSE in this folder), `skills/cloud/gcloud` v1.0.4, https://github.com/google/skills. Changed: usage-attribution tags and the remote MCP server removed; approval, environment and sign-in rules added for this setup; text shortened.
@@ -11,6 +11,7 @@ Remembered gcloud commands and flags are stale. The installed CLI is the authori
 
 - Windows PowerShell 5.1. gcloud is on my user PATH, but the app's shell may not see it. Check once with `Get-Command gcloud`; if it is not found, call `& "$env:LOCALAPPDATA\Google\Cloud SDK\google-cloud-sdk\bin\gcloud.cmd"` for every gcloud command in the session.
 - Corporate proxy with TLS inspection: when a call fails with an SSL, certificate or connection error, suspect the proxy and the CA first (`gcloud config list` shows `proxy/*` and `core/custom_ca_certs_file`). Give me the fix as a command; do not change gcloud config yourself.
+- A REST call next to gcloud (e.g. Vertex AI `generateContent`) from PowerShell 5.1: keep the token in a variable (`$tok = & <gcloud> auth print-access-token`), pass `-Proxy $env:HTTPS_PROXY` to `Invoke-RestMethod` (the system proxy answers 407 Proxy Authentication Required), and set `[System.Net.ServicePointManager]::Expect100Continue = $false` before a POST (the proxy answers 417 Expectation Failed).
 - I sign in myself (`gcloud auth login`, `gcloud auth application-default login`). Never print an access or identity token into the chat; never create or download a service-account key.
 
 ## Steps for every task
